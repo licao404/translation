@@ -57,7 +57,32 @@ SVG 是一种基于 XML 文档的图片格式，所以大部分情况其表现�
 
 下一步我们需要使用 stroke-dashoffset  属性将虚线的偏移量设置为 0，此时我们看到的路径描边就是没有间断的连续曲线（实际上看到的是虚线段的第一段，前面已经设置每一虚线段的长度等于该曲线的长）。通过设置虚线偏移量等于曲线的长度，那该曲线恰好“消失”（实际上看到的是虚线段的一段间隙）。
 
-现在适当的使用 stroke-dashoffset 属性，你可以让该曲线平滑地出现在屏幕上，这就是路径动画的原理。
+通过 stroke-dashoffset 属性，同时结合CSS3的 animation，你可以让该曲线一点点的出现在屏幕上，这就是 SVG 路径动画的原理。
+
+<p data-height="265" data-theme-id="0" data-slug-hash="MvjWEz" data-default-tab="html,result" data-user="toptalblog" data-embed-version="2" data-pen-title="Toptal - SVG & CSS paths" class="codepen">See the Pen <a href="https://codepen.io/toptalblog/pen/MvjWEz/">Toptal - SVG & CSS paths</a> by Toptal Blog (<a href="https://codepen.io/toptalblog">@toptalblog</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+可以看到，我们只是改变了虚线的偏移来让虚线段的部分一点一点地出现。
+
+运用相同的原理来设置多条路径的动画，可以得到更炫酷的效果：
+
+<p data-height="265" data-theme-id="0" data-slug-hash="eEgPqW" data-default-tab="css,result" data-user="toptalblog" data-embed-version="2" data-pen-title="Toptal - SVG & CSS paths" class="codepen">See the Pen <a href="https://codepen.io/toptalblog/pen/eEgPqW/">Toptal - SVG & CSS paths</a> by Toptal Blog (<a href="https://codepen.io/toptalblog">@toptalblog</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+上面在 SVG 中画了3条路径：其中一条是固定的黑色曲线， 有一条沿着路径移动的红色曲线，后面跟着另一条黑色曲线。
+
+stroke-dasharray 和 stroke-dashoffset 是创造大量 SVG 路径动画所要用到的两个重要属性，你可以点击[这里](stroke-dashoffset )（一个方便的小工具）来体会这两个属性。
+
+### 沿 SVG 路径的动画对象
+
+通过 SVG 和 CSS，我们可以让一个对象或者元素沿着 SVG 路径做一些动效，过程中我们会用到两个属性：
+
+- offset-path：
+- offset-distance：
+
+
+
+
 
 
 
