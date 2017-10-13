@@ -14,7 +14,7 @@ SVG 是一种基于 XML 文档的图片格式，所以大部分情况其表现�
 [SVG 规范](https://www.w3.org/TR/SVG/)是由万维网联盟（W3C）于1999制定的标准。
 所有的主流浏览器目前均支持了 [SVG 的渲染](https://caniuse.com/#search=svg)。
 由于 SVG 图形是 XML 文档，因此Web浏览器提供了基于DOM节点的API，同样可用于与 SVG 图形的交互。
-### SVG Paths
+### SVG 路径
 如果要说出 SVG 中最强大的元素，那一定是 **<path>**  （路径元素） 了。
 路径元素是一个基本形状，它可以构建出你所能想象的几乎任何高级的2D图形。路径元素通过一系列绘图命令来生效，它非常类似于1967年的 Logo 编程语言，它只是更为现代化的，为复杂花哨的图形而设计的。这些命令如下图所示被写在路径元素的  **d** 属性中 ：
 
@@ -29,7 +29,7 @@ SVG 是一种基于 XML 文档的图片格式，所以大部分情况其表现�
 
 你可以点击这里了解更多关于路径元素的知识 >> [path element](http://tutorials.jenkov.com/svg/path-element.html)。
 
-### SVG Paths 与 CSS
+### SVG 路径与 CSS
 
 也许你会问：“好吧我知道 Paths 很强大，但是我怎样才能对它做路径动画呢？”。
 
@@ -77,9 +77,16 @@ stroke-dasharray 和 stroke-dashoffset 是创造大量 SVG 路径动画所要用
 
 通过 SVG 和 CSS，我们可以让一个对象或者元素沿着 SVG 路径做一些动效，过程中我们会用到两个属性：
 
-- offset-path：
-- offset-distance：
+- offset-path：offset-path 是一个 CSS 属性，它表示元素的运动路径； 
+- offset-distance：同样是一个 CSS 属性，定义了元素在路径上运动的距离，单位是数值或百分比；
 
+
+通过组合使用这两个属性，你可以非常容易地创建出类似下面的动画：
+
+<p data-height="265" data-theme-id="0" data-slug-hash="qXRJeY" data-default-tab="css,result" data-user="toptalblog" data-embed-version="2" data-pen-title="Toptal - SVG & CSS paths" class="codepen">See the Pen <a href="https://codepen.io/toptalblog/pen/qXRJeY/">Toptal - SVG & CSS paths</a> by Toptal Blog (<a href="https://codepen.io/toptalblog">@toptalblog</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+上面我们让一个 `div.ball` 的元素动了起来，同样的我们可以对任何元素（`div` , `image` , `text` ...）做这种路径动画。在这个例子中我们简单的用 offset-path 画出了元素的运动路径，
 
 
 
