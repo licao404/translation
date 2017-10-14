@@ -86,7 +86,13 @@ stroke-dasharray 和 stroke-dashoffset 是创造大量 SVG 路径动画所要用
 <p data-height="265" data-theme-id="0" data-slug-hash="qXRJeY" data-default-tab="css,result" data-user="toptalblog" data-embed-version="2" data-pen-title="Toptal - SVG & CSS paths" class="codepen">See the Pen <a href="https://codepen.io/toptalblog/pen/qXRJeY/">Toptal - SVG & CSS paths</a> by Toptal Blog (<a href="https://codepen.io/toptalblog">@toptalblog</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-上面我们让一个 `div.ball` 的元素动了起来，同样的我们可以对任何元素（`div` , `image` , `text` ...）做这种路径动画。在这个例子中我们简单的用 offset-path 画出了元素的运动路径，
+上面我们让一个 `div.ball` 的元素动了起来，同样的我们可以对任何元素（`div` , `image` , `text` ...）做这种路径动画。在这个例子中我们简单的用 offset-path 画出了元素的运动路径，然后用 offset-distance 控制元素在路径上的运动距离从 0% 到100%。
+
+### 使用 JavaScript 做 SVG 动画
+
+以上如果还不足以满足你的动画需求，你可以考虑借助 JavaScript。
+
+使用 JavaScript 对 SVG 元素做动画与对 DOM 元素做动画相似。然而我们可以更容易地实现上面提到的动画效果。之前，我们需要将路径长度硬编码在 CSS 中。借助 JavaScript 的 `path.getTotalLength()` 函数，
 
 
 
