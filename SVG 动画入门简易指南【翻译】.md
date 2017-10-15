@@ -92,10 +92,6 @@ stroke-dasharray 和 stroke-dashoffset 是创造大量 SVG 路径动画所要用
 
 以上如果还不足以满足你的动画需求，你可以考虑借助 JavaScript。
 
-使用 JavaScript 对 SVG 元素做动画与对 DOM 元素做动画相似。然而我们可以更容易地实现上面提到的动画效果。之前，我们需要将路径长度硬编码在 CSS 中。借助 JavaScript 的 `path.getTotalLength()` 函数，
+使用 JavaScript 对 SVG 元素做动画与对 DOM 元素做动画相似。然而我们可以更容易地实现上面提到的动画效果。之前，我们需要将路径长度硬编码在 CSS 中。借助 JavaScript 的 `path.getTotalLength()` 函数可以获取 DOM 上路径的长度，你可以点击[这里](https://jakearchibald.com/2013/animated-line-drawing-svg/)了解更多。除此之外，有很多第三方库可以帮助你十分容易地制作 SVG 动画。
 
-
-
-
-
-
+[Snap.svg](http://snapsvg.io/) 不仅可以使 JavaScript  绘制 SVG 图形变得更容易，它的使用也异常简单，只需要调用 `.animate({})` 这个API即可。
